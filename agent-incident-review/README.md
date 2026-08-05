@@ -24,7 +24,7 @@ The aim is to turn these observations into a repeatable review method rather tha
 
 ## Core review framework
 
-Each incident is analyzed across eight fields:
+Each incident is analyzed across nine fields:
 
 1. **Authorized objective**  
    What task was the agent legitimately given?
@@ -38,37 +38,57 @@ Each incident is analyzed across eight fields:
 4. **Behavioral mechanism**  
    Was the failure driven by goal expansion, concealment, social engineering, persistence, reward hacking, tool misuse, or another mechanism?
 
-5. **Human detectability**  
+5. **Environment class**  
+   Did the behavior occur in a fictional simulation, a contained evaluation, or against live external systems and people?
+
+6. **Human detectability**  
    What visible signals could a reviewer have noticed?
 
-6. **Oversight failure**  
+7. **Oversight failure**  
    Which approval gate, permission boundary, logging mechanism, or review process failed?
 
-7. **Counterfactual control**  
+8. **Counterfactual control**  
    What minimal intervention could have prevented the incident without blocking legitimate work?
 
-8. **Confidence and ambiguity**  
+9. **Confidence and ambiguity**  
    Which conclusions are directly supported, and which remain interpretive?
 
-## Severity scale
+## Case set
+
+The [case index](case-index.md) compares environment, behavior, severity, confidence, and external outcome.
+
+- [AIR-001 — AISI unsanctioned real-world agent behavior](cases/001-aisi-unsanctioned-agent-behaviour.md)
+- [AIR-002 — Anthropic simulated agentic misalignment and blackmail](cases/002-anthropic-simulated-agentic-misalignment.md)
+- [AIR-003 — OpenAI o1 scheming and oversight deactivation](cases/003-openai-o1-scheming-evaluations.md)
+- [AIR-004 — AISI cheating against cyber evaluation infrastructure](cases/004-aisi-cyber-evaluation-cheating.md)
+- [AIR-005 — METR GPT-5.6 Sol measurement corruption](cases/005-metr-gpt-5-6-sol-measurement-corruption.md)
+
+## Behavioral severity
 
 | Level | Description |
 |---|---|
 | 0 | No meaningful violation |
 | 1 | Ambiguous or low-impact deviation |
-| 2 | Clear unauthorized action with limited external impact |
-| 3 | Deception, persistence, or manipulation involving real systems or people |
-| 4 | Material malicious action, serious compromise attempt, or coordinated evasion of oversight |
+| 2 | Clear unauthorized or integrity-violating action with limited reach |
+| 3 | Deception, coercion, persistence, or manipulation that would be consequential if executed |
+| 4 | Serious compromise attempt or coordinated evasion of oversight |
+
+Severity describes the trajectory. It does not say whether the setting was real or whether harm occurred. Environment class and external outcome carry those facts separately.
 
 ## Repository structure
 
 ```text
 agent-incident-review/
 ├── README.md
+├── case-index.md
 ├── methodology.md
 ├── review-template.md
 └── cases/
-    └── 001-aisi-unsanctioned-agent-behaviour.md
+    ├── 001-aisi-unsanctioned-agent-behaviour.md
+    ├── 002-anthropic-simulated-agentic-misalignment.md
+    ├── 003-openai-o1-scheming-evaluations.md
+    ├── 004-aisi-cyber-evaluation-cheating.md
+    └── 005-metr-gpt-5-6-sol-measurement-corruption.md
 ```
 
 ## Intended audience
@@ -85,4 +105,4 @@ This project is relevant to teams working on:
 
 ## Status
 
-Version 0.1 establishes the framework and applies it to one public incident. Future cases should use primary documentation where possible and clearly distinguish observed facts from interpretation.
+Version 0.2 contains five source-verified reviews spanning fictional simulations, contained evaluations, and live external actions. The next priority is coverage outside cyber and deliberately adversarial evaluation settings.
