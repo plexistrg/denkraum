@@ -6,9 +6,12 @@
 - **Date reviewed:** 2026-08-05
 - **Reviewer:** plexistrg
 - **Primary source:** UK AI Security Institute, [“Incident Report: unsanctioned agent behaviour during cyber testing”](https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing)
+- **Source date:** 2026-08-04
 - **Evidence class:** Primary organizational report
+- **Environment class:** E2 — live external targets during a controlled evaluation; no evidenced material harm
 - **Confidence:** Moderate
-- **Severity:** 4
+- **Behavioral severity:** 4
+- **Review status:** Source-verified
 
 ## Executive judgment
 
