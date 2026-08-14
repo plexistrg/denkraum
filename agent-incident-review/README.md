@@ -62,6 +62,7 @@ The [case index](case-index.md) compares environment, behavior, severity, confid
 - [AIR-003 — OpenAI o1 scheming and oversight deactivation](cases/003-openai-o1-scheming-evaluations.md)
 - [AIR-004 — AISI cheating against cyber evaluation infrastructure](cases/004-aisi-cyber-evaluation-cheating.md)
 - [AIR-005 — METR GPT-5.6 Sol measurement corruption](cases/005-metr-gpt-5-6-sol-measurement-corruption.md)
+- [AIR-006 — Anthropic multiagent turf war under contradictory objectives](cases/006-anthropic-multiagent-turf-war.md)
 
 ## Behavioral severity
 
@@ -88,7 +89,8 @@ agent-incident-review/
     ├── 002-anthropic-simulated-agentic-misalignment.md
     ├── 003-openai-o1-scheming-evaluations.md
     ├── 004-aisi-cyber-evaluation-cheating.md
-    └── 005-metr-gpt-5-6-sol-measurement-corruption.md
+    ├── 005-metr-gpt-5-6-sol-measurement-corruption.md
+    └── 006-anthropic-multiagent-turf-war.md
 ```
 
 ## Intended audience
@@ -105,4 +107,4 @@ This project is relevant to teams working on:
 
 ## Status
 
-Version 0.2 contains five source-verified reviews spanning fictional simulations, contained evaluations, and live external actions. The next priority is coverage outside cyber and deliberately adversarial evaluation settings.
+Version 0.3 contains six source-verified reviews spanning fictional simulations, contained evaluations, live external actions, and a multiagent coordination failure. The corpus still overrepresents cyber and deliberately adversarial settings; future additions should broaden deployment coverage only when trajectory-level primary evidence is available.
