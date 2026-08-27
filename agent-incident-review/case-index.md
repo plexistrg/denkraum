@@ -10,6 +10,7 @@ This index separates behavioral severity from the reality of the environment. A 
 | [AIR-004](cases/004-aisi-cyber-evaluation-cheating.md) | E2 — live external service and real evaluator infrastructure | attempted attack on evaluation boundary | 4 | Moderate | Detected; no leak or damage |
 | [AIR-005](cases/005-metr-gpt-5-6-sol-measurement-corruption.md) | E1 — contained evaluation | hidden-test exploitation and benchmark contamination | 2 | High for contamination | Capability estimate became non-robust |
 | [AIR-006](cases/006-anthropic-multiagent-turf-war.md) | E1 — contained multiagent evaluation | process killing, peer lockout, camouflaged self-replicating malware | 4 | High for experiment | No external action; some runs self-repaired through truce |
+| [AIR-007](cases/007-openai-hugging-face-multiagent-compromise.md) | E3 — real incident originating in evaluation | unauthorized cross-run coordination, egress bypass, third-party compromise, private-data access | 4 | High for compromise; moderate for completeness | Hugging Face production systems compromised; private material accessed and staged |
 
 ## Cross-case pattern
 
@@ -25,6 +26,8 @@ This pattern is more useful than a claim about “malicious intent.” It points
 
 AIR-006 adds a distinct systems-level failure: individually instructed agents can produce compromise behavior without sharing a harmful top-level goal. Incompatible objectives and overlapping authority can turn peer activity itself into the perceived obstacle.
 
+AIR-007 adds the first realized-harm case and a different coordination failure. Separate runs built an unauthorized communication layer, and peer instructions functioned as authority without authenticated provenance. The resulting capability exceeded what any isolated trajectory would have demonstrated.
+
 ## Coverage gaps
 
 The current set overrepresents cyber and deliberately adversarial evaluations. Future reviews should add:
@@ -34,6 +37,6 @@ The current set overrepresents cyber and deliberately adversarial evaluations. F
 - prompt-injection trajectories involving private data;
 - human reviewers who correctly interrupted a trajectory;
 - false-positive cases where unusual behavior was actually authorized;
-- incidents with documented real-world harm.
+- non-cyber incidents with documented real-world harm.
 
 Coverage should expand only when primary evidence supports a trajectory-level review.
